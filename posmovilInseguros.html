@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Promotores de marca</title>
+</head>
+<body>
+    <header>
+        <h3>Promotores de marca</h3>
+    </header>
+    <main class="main">
+        <input type="text" id="inputNombre" class="content.input" placeholder="Nombres" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+
+        <input type="text" id="inputApellidos" class="content.input" placeholder="Apellidos" onkeyup="procesarLista();" ondblclick="selec">
+
+        <input type="text" id="inputRut" class="content.input" placeholder="Rut" onkeyup="procesarLista();" ondblclick="selec">
+
+        <input type="text" id="inputMarca" class="content.input" placeholder="Marca" onkeyup="procesarLista();" ondblclick="selec">
+
+        <input type="text" id="inputTienda" class="content.input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
+
+        <div class="resultado" id="resultado">
+        </div>
+        <a class="enlace" href="./borrarUsuarios.html">Borrar usuarios</a>
+        <a class="enlace" href="./consultarUsuario.html">Consultar usuario</a>
+        <a class="enlace" href="./posmovilSeguros.html">Agregar usuario posmovil</a>
+        <a class="enlace" href="./posmovilInseguros.html">Promotores de marca</a>
+        <a class="enlace" href="./aprobadores.html">Aprobadores</a>
+    </main>
+    <footer></footer>
+    <script src="./posmovilInseguros.js">
+    </script>
+</body>
+</html>

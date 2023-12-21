@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px blue;
+    min-height: 90vh;
+    min-width: 280px;
+    background-color: gray;
+}
+
+.boton {
+    text-decoration: none;
+    cursor: pointer;
+    width: 50px;
+    height: 20px;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: bisque;
+}
+
+.resultado {
+    border: solid 1px red;
+    height: 50vh;
+    width: 90%;
+    margin: 14px;
+    background-color: azure;
+    padding: 7px;
+}
+
+.enlace {
+    padding: 7px;
+}
