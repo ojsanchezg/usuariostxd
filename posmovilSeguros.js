@@ -12,9 +12,9 @@ function procesarLista() {
         const cadenaUsuarios = listaCadenas[i].trim();
         const users = cadenaUsuarios.toLowerCase();
         const usuarios = users.replace('\n','');
-        resultadoElement.innerHTML += `<p>m${i}: associateUserToClient(userId: "${usuarios}", clientId: "pos_movil_app"),</p>`;
+        resultadoElement.innerHTML += `<p>m${i}: associateUserToClient(user: "${usuarios}", clientId: "pos_movil_app"),</p>`;
 
-        resultadoElement.innerHTML += `<p>p${i}: associatePermission(userId: "${usuarios}", clientId: "pos_movil_app", scope: "cashier"),</p>`;
+        resultadoElement.innerHTML += `<p>p${i}: associatePermission(user: "${usuarios}", clientId: "pos_movil_app", scope: "cashier"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
     return users;
