@@ -11,9 +11,20 @@
     justify-content: center;
     align-items: center;
     border: solid 1px blue;
-    min-height: 90vh;
+    min-height: 87vh;
     min-width: 280px;
     background-color: gray;
+}
+
+#cencosud_logo {
+    width: 150px;
+    margin-bottom: 3px;
+}
+
+h2 {
+    margin-bottom: 14px;
+    color: aliceblue;
+    font-family: 'Dancing Script', cursive;
 }
 
 .boton {
@@ -26,6 +37,10 @@
     background-color: bisque;
 }
 
+.content_input {
+    margin-bottom: 7px;
+}
+
 .resultado {
     border: solid 1px red;
     height: 50vh;
@@ -33,8 +48,24 @@
     margin: 14px;
     background-color: azure;
     padding: 7px;
+    overflow: scroll;
 }
 
 .enlace {
-    padding: 7px;
+    padding: 3px;
+}
+
+footer {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    min-height: 5vh;
+    align-items: end;
+    justify-content: center;
+    border: solid 1px green;
+}
+
+h6 {
+    margin-right: 5px;
+    color: darkgray;
 }

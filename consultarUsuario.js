@@ -26,5 +26,4 @@ function procesarLista() {
             }<br>
         }<br>
     }</p>`;
-    resultadoElement.innerHTML += `}`;
 }
