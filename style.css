@@ -13,7 +13,7 @@
     border: solid 1px blue;
     min-height: 87vh;
     min-width: 280px;
-    background-color: gray;
+    background-color: rgb(240, 237, 237);
 }
 
 #cencosud_logo {
@@ -21,9 +21,10 @@
     margin-bottom: 3px;
 }
 
-h2 {
+h1 {
     margin-bottom: 14px;
-    color: aliceblue;
+    text-justify: center;
+    color: rgb(255, 152, 84);
     font-family: 'Dancing Script', cursive;
 }
 
@@ -52,7 +53,13 @@ h2 {
 }
 
 .enlace {
-    padding: 3px;
+    margin: 1px;
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-color: rgb(65, 127, 242);;
 }
 
 footer {
