@@ -7,12 +7,15 @@ function procesarLista() {
     //let resultado = listaCadenas.replace(regex' ');0
     const resultadoElement = document.getElementById('resultado');
 
-    resultadoElement.innerHTML = `query searchUser1 {`;
+    resultadoElement.innerHTML = `query searchUser {`;
     for (let i=0; i < listaCadenas.length; i++) {
         const cadenaUsuarios = listaCadenas[i].trim();
         const users = cadenaUsuarios.toLowerCase();
-        const usuarios = users.replace('\n','');
-        resultadoElement.innerHTML += `<p>users(user: "${usuarios}") {</p>`;
+        const usuarios = users.replace(/\p{N}\p{S}/g,'');
+        const usuariosLower = usuarios.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
+            return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
+        });
+        resultadoElement.innerHTML += `<p>users(user: "<b>${usuariosLower}</b>") {</p>`;
     }
     resultadoElement.innerHTML += `<p>name <br>
             firstName<br>

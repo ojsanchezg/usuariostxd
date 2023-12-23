@@ -26,7 +26,7 @@ function procesarLista() {
 
     const resultadoElement = document.getElementById('resultado');
 
-    resultadoElement.innerHTML = `mutation insegurosP {`;
+    resultadoElement.innerHTML = `mutation promotores {`;
     for (let i=0; i < listaCadenasNombre.length; i++) {
         const cadenaUsuarios = listaCadenasNombre[i].trim();
         const cadenaApellidoUsuarios = listaCadenasApellidos[i].trim();
@@ -51,10 +51,10 @@ function procesarLista() {
 
         // /\D/g matches all non-digit characters in the originalString. The \D character class matches any character that is not a digit. The g flag specifies that all matches should be replaced.
 
-        resultadoElement.innerHTML += `<p>pma${i}: associateByRut(user: "${usuariosRut}", firstName: "${usuarios}", lastName: "${usuariosApellidos}", clientId: "pos_movil_app"),</p>`;
-        resultadoElement.innerHTML += `pmp1${i}: associatePermission(user: "${usuariosRut}", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::${cadenaTiendaUsuarios};brands::${usuariosMarca}"),</p>`;
+        resultadoElement.innerHTML += `<p><b>pma${i}</b>: associateByRut(<b>user: "${usuariosRut}</b>", firstName: "<b>${usuarios}</b>", lastName: "<b>${usuariosApellidos}</b>", clientId: "pos_movil_app"),</p>`;
+        resultadoElement.innerHTML += `pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</p>`;
 
-        resultadoElement.innerHTML += `pmp${i}: associatePermission(user: "${usuariosRut}", clientId: "pos_movil_app", scope: "promoter", metadata: "stores::${cadenaTiendaUsuarios};brands::${usuariosMarca}"),</p>`;
+        resultadoElement.innerHTML += `pmp${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "promoter", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
 }

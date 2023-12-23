@@ -7,12 +7,14 @@ function procesarLista() {
     //let resultado = listaCadenas.replace(regex' ');0
     const resultadoElement = document.getElementById('resultado');
 
-    resultadoElement.innerHTML = `mutation deleteUsuario {`;
+    resultadoElement.innerHTML = `mutation javelDeleteSUser {`;
     for (let i=0; i < listaCadenas.length; i++) {
         const cadenaUsuarios = listaCadenas[i].trim();
         const users = cadenaUsuarios.toLowerCase();
-        const usuarios = users.replace('\n','');
-        resultadoElement.innerHTML += `<p>d${i}: deletePermission(userId: "${usuarios}", clientId: "javel_front", scope: "superuser"),</p>`;
+        const usuarios = users.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
+            return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
+        });
+        resultadoElement.innerHTML += `<p><b>d${i}</b>: deletePermission(userId: "<b>${usuarios}</b>", clientId: "javel_front", scope: "superuser"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
     return users;

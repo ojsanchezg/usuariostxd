@@ -11,10 +11,12 @@ function procesarLista() {
     for (let i=0; i < listaCadenas.length; i++) {
         const cadenaUsuarios = listaCadenas[i].trim();
         const users = cadenaUsuarios.toLowerCase();
-        const usuarios = users.replace('\n','');
-        resultadoElement.innerHTML += `<p>m${i}: associateUserToClient(user: "${usuarios}", clientId: "pos_movil_app"),</p>`;
+        const usuarios = users.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
+            return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
+        });
+        resultadoElement.innerHTML += `<p><b>m${i}</b>: associateUserToClient(user: "<b>${usuarios}</b>", clientId: "pos_movil_app"),</p>`;
 
-        resultadoElement.innerHTML += `<p>p${i}: associatePermission(user: "${usuarios}", clientId: "pos_movil_app", scope: "cashier"),</p>`;
+        resultadoElement.innerHTML += `<p><b>p${i}</b>: associatePermission(user: "<b>${usuarios}</b>", clientId: "pos_movil_app", scope: "cashier"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
     return users;

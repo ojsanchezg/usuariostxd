@@ -17,12 +17,14 @@ function procesarLista() {
 
         const users = cadenaUsuarios.toLowerCase();
         //const usersTienda = cadenaTiendaUsuarios.toLowerCase(); No hace falta, son números.
+        const usuarios = users.replace(/\p{N}\p{S}/g,'');
+        const usuariosLower = usuarios.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
+            return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
+        });
 
-        const usuarios = users.replace('\n','');
+        resultadoElement.innerHTML += `<p><b>m${i}</b>: associateUserToClient(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile"),</p>`;
 
-        resultadoElement.innerHTML += `<p>m${i}: associateUserToClient(user: "${usuarios}", clientId: "app_tienda_mobile"),</p>`;
-
-        resultadoElement.innerHTML += `p${i}: associatePermission(user: "${usuarios}", clientId: "app_tienda_mobile", scope: "approver",  metadata: "stores::${cadenaTiendaUsuarios}"),</p>`;
+        resultadoElement.innerHTML += `<b>p${i}</b>: associatePermission(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile", scope: "approver",  metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
 }

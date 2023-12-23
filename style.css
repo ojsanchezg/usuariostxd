@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Dancing+Script:wght@400;500&family=Nixie+One&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&family=Roboto:wght@400;500;700;900&display=swap');
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -50,6 +54,8 @@ h1 {
     background-color: azure;
     padding: 7px;
     overflow: scroll;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
 }
 
 .enlace {
