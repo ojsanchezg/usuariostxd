@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Dancing+Script:wght@400;500&family=Nixie+One&family=Raleway:ital,wght@0,200;0,400;1,200;1,400&family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>usuarios txD</title>
+</head>
+<body>
+    <header class="header">
+        <a id="oauth__button___back" href="./oauth.html">
+            <span class="icon___back">
+                <svg class="icons__svg" id="icon__svg__back" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#3e7dd0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                </svg>
+            </span>
+        </a>
+    </header>
+    <section class="subtitle">
+        <h3>Eliminar usuarios</h3>
+    </section>
+    <main class="main">
+        <span>Usuarios: </span>
+        <input type="text" id="inputNombre" class="content_input" placeholder="Los usuarios van aquí" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+
+        <label for="clientid">ClientID:</label>
+        <select name="" id="selectClientid" onchange="procesarLista()">
+                <option value="" disabled selected="">Selecciona el ClientID</option>
+                <option value="pos_movil_app">Cajero POSMovil</option>
+                <option value="pos_movil_app">Promotor POSMovil</option>
+                <option value="app_tienda_mobile">Aprobador de descuentos</option>
+                <option value="app_tienda_mobile">Picker</option>
+                <option value="odeon-front">Packer</option>
+                <option value="odeon-front">Odeon admin</option>
+                <option value="odeon-front">Darkstore admin</option>
+                <option value="javel_front">Javel user</option>
+                <option value="javel_front">Javel Superuser</option>
+                <option value="eg_dispatcher_frontend">Dispatcher admin</option>
+                <option value="eg_dispatcher_frontend">Dispatcher dc_user</option>
+                <option value="eg_dispatcher_frontend">Dispatcher superuser</option>
+                <option value="eg_dispatcher_frontend">Dispatcher visualicer</option>
+                <option value="recepcion_mercaderia">Recepcion de mercaderia</option>
+                <option value="sai-front">SAI comercial</option>
+                <option value="sai-front">SAI proveedor</option>
+                <option value="sai-front">SAI tienda</option>
+                <option value="vendedor">Vendedor</option>
+        </select>
+
+
+
+        <label for="scopes">Scopes:</label>
+        <select name="" id="selectScope" onchange="procesarLista()">
+                <option value="" disabled selected="">Selecciona un scope</option>
+                <option value="cashier">Cajero</option>
+                <option value="promoter">Promotor</option>
+                <option value="approver">Approver</option>
+                <option value="odeon-picker">Odeon-picker</option>
+                <option value="packer">Odeon-packer</option>
+                <option value="admin">Odeon-admin</option>
+                <option value="darkstore-admin">Darkstore-admin</option>
+                <option value="user">Javel user</option>
+                <option value="superuser">Javel Superuser</option>
+                <option value="administrator">Dispatcher administrator</option>
+                <option value="dc_user">Dispatcher dc_user</option>
+                <option value="superuser">Dispatcher superuser</option>
+                <option value="visualicer">Dispatcher visualicer</option>
+                <option value="recepcion_mercaderia">Recepcion de mercaderia</option>
+                <option value="comercial">SAI comercial</option>
+                <option value="proveedor">SAI proveedor</option>
+                <option value="tienda">SAI tienda</option>
+                <option value="vendedor">Vendedor</option>
+        </select>
+
+        <div class="resultado" id="resultado"></div>
+        <div class="enlaces">
+
+            <a href="" class="enlace" id="enlaces__copiar">Copiar</a>
+        </div>
+    </main>
+    <footer>
+        <a id="oauth__button___home" href="./index.html">
+            <span class="icon___home">
+                <svg class="icons___svg" id="icon__home" height="40px" width="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#417ff2ff2929" stroke-width="0.192"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                        <path d="M8 3V3.41667M3.41667 8H3M4.66667 4.66667L4.25 4.25M11.3333 4.66667L11.75 4.25M4.66667 11.3333L4.25 11.75M9.73244 7C9.38663 6.4022 8.74028 6 8 6C6.89543 6 6 6.89543 6 8C6 8.74028 6.4022 9.38663 7 9.73244M6 15L12.4083 9.01893C12.7929 8.65995 12.9852 8.48046 13.2041 8.41266C13.3969 8.35296 13.6031 8.35296 13.7959 8.41266C14.0148 8.48046 14.2071 8.65995 14.5917 9.01893L21 15M8 13.1333V19.4C8 19.9601 8 20.2401 8.10899 20.454C8.20487 20.6422 8.35785 20.7951 8.54601 20.891C8.75992 21 9.03995 21 9.6 21H17.4C17.9601 21 18.2401 21 18.454 20.891C18.6422 20.7951 18.7951 20.6422 18.891 20.454C19 20.2401 19 19.9601 19 19.4V13.1333" stroke="#417ff2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path> 
+                    </g>
+                </svg>
+            </span>
+        </a>
+    </footer>
+    <script src="./eliminar.js">
+    </script>
+</body>
+</html>
+
+

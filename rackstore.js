@@ -1,5 +1,5 @@
 function procesarLista() {
-    const inputElement = document.getElementById('inputText');
+    const inputElement = document.getElementById('inputNombre');
     const inputTiendaElement = document.getElementById('inputTienda');
 
     const inputNombreValue = inputElement.value;
@@ -22,9 +22,9 @@ function procesarLista() {
             return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
 
-        resultadoElement.innerHTML += `<p><b>m${i}</b>: associateUserToClient(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile"),</p>`;
+        resultadoElement.innerHTML += `<p><b>m${i}</b>: associateUserToClient(user: "<b>${usuariosLower}</b>", clientId: "rackstores_mobile"),</p>`;
 
-        resultadoElement.innerHTML += `<b>p${i}</b>: associatePermission(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile", scope: "approver",  metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</p>`;
+        resultadoElement.innerHTML += `<b>p${i}</b>: associatePermission(user: "<b>${usuariosLower}</b>", clientId: "rackstores_mobile", scope: "default",  metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</p>`;
     }
     resultadoElement.innerHTML += `}`;
 }

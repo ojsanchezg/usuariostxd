@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <a id="oauth__button___back" href="./posmovil.html">
+        <a id="oauth__button___back" href="./oauth.html">
             <span class="icon___back">
                 <svg class="icons__svg" id="icon__svg__back" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -22,14 +22,16 @@
         </a>
     </header>
     <section class="subtitle">
-        <h3>Agregar cajeros POSMovil</h3>
+        <h3>Rackstore mobile</h3>
     </section>
     <main class="main">
-        <input type="text" id="inputText" class="content_input" placeholder="Los usuarios van aquí" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+        <input type="text" id="inputNombre" class="content_input" placeholder="Los usuarios van aquí" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+        <input type="text" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
         <div class="resultado" id="resultado">
         </div>
         <div class="enlaces">
             <a href="" class="enlace" id="enlaces__copiar">Copiar</a>
+            <a class="enlace" href="./index.html">Inicio</a>
         </div>
     </main>
     <footer>
@@ -46,7 +48,7 @@
             </span>
         </a>
     </footer>
-    <script src="./posmovilSeguros.js">
+    <script src="./rackstore.js">
     </script>
 </body>
 </html>

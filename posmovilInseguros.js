@@ -18,7 +18,7 @@ function procesarLista() {
     const listaCadenasApellidos = inputApellidosValue.split(',');
     const listaCadenasRut = inputRutValue.split(',');
     const listaCadenasMarca = inputMarcaValue.split(',');
-    const listaCadenasTienda = inputTiendaValue.split(',');
+    //const listaCadenasTienda = inputTiendaValue.split(',');
 
     //Entonces surgen 2 opciones. 1: Dejar de dividir por espacios e incoporar otro con una función. En este caso dejaría de ser automático el agregado de usuarios.
     //Y 2: Seguir dividiendo por espacios y sólo aceptar 1 único nombre y 1 único apellido.
@@ -32,7 +32,8 @@ function procesarLista() {
         const cadenaApellidoUsuarios = listaCadenasApellidos[i].trim();
         const cadenaRutUsuarios = listaCadenasRut[i].trim();
         const cadenaMarcaUsuarios = listaCadenasMarca[i].trim();
-        const cadenaTiendaUsuarios = listaCadenasTienda[i].trim();
+        //const cadenaTiendaUsuarios = listaCadenasTienda[i].trim();
+        const cadenaTiendaUsuarios = inputTiendaValue;
 
         const users = cadenaUsuarios.toLowerCase();
         const usersApellidos = cadenaApellidoUsuarios.toLowerCase();
