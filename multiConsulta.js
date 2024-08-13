@@ -18,14 +18,18 @@ function procesarLista() {
         const usuariosLower = usuarios.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
             return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
-        resultadoElement.innerHTML += `<span>q${i}: users(user: "<b>${usuariosLower}</b>") {</span>`;
+        resultadoElement.innerHTML += `<pre>    q${i}: users(user: "<b>${usuariosLower}</b>") {</pre>`;
         resultadoElement.innerHTML += `<pre>
         name
+        firstName
+        lastName
         permissions {
             clientId
             clientScope
             metadata
         }
+        createdAt
+        updatedAt
     }<br></pre>`;
     }
 resultadoElement.innerHTML += `}<br>`;

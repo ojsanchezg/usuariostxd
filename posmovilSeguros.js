@@ -14,9 +14,9 @@ function procesarLista() {
         const usuarios = users.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
             return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
-        resultadoElement.innerHTML += `&emsp;&emsp;<span><b>m${i}</b>: associateUserToClient(user: "<b>${usuarios}</b>", clientId: "pos_movil_app"),</span><br>`;
+        resultadoElement.innerHTML += `  <pre><b>  m${i}</b>: associateUserToClient(user: "<b>${usuarios}</b>", clientId: "pos_movil_app"),</pre>`;
 
-        resultadoElement.innerHTML += `&emsp;&emsp;<span>p${i}: associatePermission(user: "<b>${usuarios}</b>", clientId: "pos_movil_app", scope: "cashier"),</span><br>`;
+        resultadoElement.innerHTML += `  <pre>  p${i}: associatePermission(user: "<b>${usuarios}</b>", clientId: "pos_movil_app", scope: "cashier"),</pre>`;
     }
     resultadoElement.innerHTML += `}`;
     return users;

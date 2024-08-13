@@ -11,7 +11,7 @@ function procesarLista() {
 
     const resultadoElement = document.getElementById('resultado');
 
-    resultadoElement.innerHTML = `mutation securePickersOdeon {`;
+    resultadoElement.innerHTML = `mutation secureOdeonPicker {`;
     for (let i=0; i < listaCadenasNombre.length; i++) {
         const cadenaUsuarios = listaCadenasNombre[i].trim();
         //const cadenaTiendaUsuarios = listaCadenasTienda[i].trim();
@@ -24,8 +24,8 @@ function procesarLista() {
             return caracterPrevio + minuscula.toLocaleLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
 
-        resultadoElement.innerHTML += `<p><b>m${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile"),</p>`;
-        resultadoElement.innerHTML += `<p>p${i}: associatePermission(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile", scope: "odeon-picker", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</p>`;
+        resultadoElement.innerHTML += `<pre>  <b>m${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile"),</pre>`;
+        resultadoElement.innerHTML += `<pre>  p${i}: associatePermission(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile", scope: "odeon-picker", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre>`;
     }
     resultadoElement.innerHTML += `}`;
 }

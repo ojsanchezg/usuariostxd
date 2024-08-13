@@ -15,18 +15,21 @@ function procesarLista() {
         const usuariosLower = usuarios.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
             return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
-        resultadoElement.innerHTML += `&emsp;&emsp;<span>users(user: "<b>${usuariosLower}</b>") {</span><br>`;
-        resultadoElement.innerHTML += `&emsp;&emsp;&emsp;&emsp;<span>name <br>
-            &emsp;&emsp;&emsp;&emsp;firstName<br>
-            &emsp;&emsp;&emsp;&emsp;lastName<br>
-            &emsp;&emsp;&emsp;&emsp;documentId<br>
-            &emsp;&emsp;&emsp;&emsp;mail<br>
-            &emsp;&emsp;&emsp;&emsp;permissions {<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;clientId<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;clientScope<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;metadata<br>
-            &emsp;&emsp;&emsp;&emsp;}<br>
-            &emsp;&emsp;}<br>
-    }</span>`;
+        resultadoElement.innerHTML += `<pre>    (user: "<b>${usuariosLower}</b>") {</pre>`;
+        resultadoElement.innerHTML += `<pre>
+        name
+        firstName
+        lastName
+        documentId
+        mail
+        permissions {
+            clientId
+            clientScope
+            metadata
+        }
+        createdAt
+        updatedAt
+    }
+}</pre>`;
     }   
 }

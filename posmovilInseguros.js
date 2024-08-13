@@ -47,15 +47,14 @@ function procesarLista() {
         const usuariosApellidos = usersApellidos.replace(/(^|[^A-Za-zÁÉÍÓÚÄËÏÖÜÑÇáéíóúäëïöüñç])([a-záéíóúäëïöüñç])/g, function(match, caracterPrevio, minuscula) {
             return caracterPrevio + minuscula.toLocaleUpperCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
-        const usuariosRut = usersRut.replace(/\D/g,'');
+        const usuariosRut = usersRut.replace(/[^0-9k]/g,'');
         const usuariosMarca = usersMarca.replace('\n','');
 
         // /\D/g matches all non-digit characters in the originalString. The \D character class matches any character that is not a digit. The g flag specifies that all matches should be replaced.
 
-        resultadoElement.innerHTML += `<p><b>pma${i}</b>: associateByRut(<b>user: "${usuariosRut}</b>", firstName: "<b>${usuarios}</b>", lastName: "<b>${usuariosApellidos}</b>", clientId: "pos_movil_app"),</p>`;
-        resultadoElement.innerHTML += `pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</p>`;
-
-        resultadoElement.innerHTML += `pmp${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "promoter", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</p>`;
+        resultadoElement.innerHTML += `<pre>    <b>pma${i}</b>: associateByRut(<b>user: "${usuariosRut}</b>", firstName: "<b>${usuarios}</b>", lastName: "<b>${usuariosApellidos}</b>", clientId: "pos_movil_app"),</pre>`;
+        resultadoElement.innerHTML += `<pre>    pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre>`;
+        resultadoElement.innerHTML += `<pre>    pmp${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "promoter", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
 }
