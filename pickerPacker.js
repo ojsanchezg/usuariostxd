@@ -26,7 +26,7 @@ function procesarLista() {
 
         resultadoElement.innerHTML += `<pre>  <b>m${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile"),</pre>`;
         resultadoElement.innerHTML += `<pre>  p${i}: associatePermission(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile", scope: "odeon-picker", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre>`;
-        resultadoElement.innerHTML += `<pre>  <b>x${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "odeon-front"),</pre>`;
+        resultadoElement.innerHTML += `<pre>  x${i}: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "odeon-front"),</pre>`;
         resultadoElement.innerHTML += `<pre>  y${i}: associatePermission(user: <b>"${usuarios}"</b>, clientId: "odeon-front", scope: "packer", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
