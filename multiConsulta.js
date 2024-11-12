@@ -30,6 +30,7 @@ function procesarLista() {
         }
         createdAt
         updatedAt
+        isTrustUser
     }<br></pre>`;
     }
 resultadoElement.innerHTML += `}<br>`;

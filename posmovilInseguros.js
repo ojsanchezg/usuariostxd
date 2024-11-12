@@ -53,7 +53,7 @@ function procesarLista() {
         // /\D/g matches all non-digit characters in the originalString. The \D character class matches any character that is not a digit. The g flag specifies that all matches should be replaced.
 
         resultadoElement.innerHTML += `<pre>    <b>pma${i}</b>: associateByRut(<b>user: "${usuariosRut}</b>", firstName: "<b>${usuarios}</b>", lastName: "<b>${usuariosApellidos}</b>", clientId: "pos_movil_app"),</pre>`;
-        resultadoElement.innerHTML += `<pre>    pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre>`;
+        //resultadoElement.innerHTML += `<pre>    pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre>`;
         resultadoElement.innerHTML += `<pre>    pmp${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "promoter", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
