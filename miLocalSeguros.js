@@ -33,9 +33,9 @@ function procesarLista() {
 
         const cadenaTiendaUsuarios = usersTienda.replace(/[^0-9]/g,'');
 
-        resultadoElement.innerHTML += `<pre>    <b>pma${i}</b>: associateByRut(<b>user: "${usuarios}</b>", clientId: "app_tienda_mobile"),</pre>`;
+        //resultadoElement.innerHTML += `<pre>    <b>pma${i}</b>: associateByRut(<b>user: "${usuarios}</b>", clientId: "app_tienda_mobile"),</pre>`;
         //resultadoElement.innerHTML += `<pre>    pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre>`;
-        resultadoElement.innerHTML += `<pre>    pmp${i}: associatePermission(<b>user: "${usuarios}</b>", clientId: "app_tienda_mobile", scope: "basico", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</pre><br>`;
+        resultadoElement.innerHTML += `<pre>   <b>pmp${i}</b>: associateUserWithPermissions(<b>user: "${usuarios}</b>", clientId: "app_tienda_mobile", scope: "basico", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
 }

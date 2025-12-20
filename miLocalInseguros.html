@@ -31,7 +31,65 @@
 
         <input type="text" id="inputRut" class="content_input" placeholder="Rut" onkeyup="procesarLista();" ondblclick="selec">
 
-        <input type="text" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
+        <!-- Datalist de tiendas -->
+        <form action="/send/" method="post">
+            <input type="text" list="tiendas" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
+            <datalist id="tiendas">
+                <option value="9">Lyon</option>
+                <option value="10">Plaza Oeste</option>
+                <option value="101">San Bernardo</option>
+                <option value="102">Arauco Maipú</option>
+                <option value="103">Iquique</option>
+                <option value="104">Bandera</option>
+                <option value="105">Copiapó</option>
+                <option value="106">Estación Central</option>
+                <option value="107">El Belloto</option>
+                <option value="108">Ñuñoa</option>
+                <option value="109">Osorno</option>
+                <option value="110">Arica</option>
+                <option value="111">San Antonio</option>
+                <option value="115">Costanera Center</option>
+                <option value="116">Rancagua Rex</option>
+                <option value="118">Quilín</option>
+                <option value="119">Quilicura</option>
+                <option value="121">Ovalle</option>
+                <option value="123">La Dehesa</option>
+                <option value="124">Coquimbo</option>
+                <option value="125">Independencia</option>
+                <option value="13">Valparaíso</option>
+                <option value="131">Maule</option>
+                <option value="16">Trébol</option>
+                <option value="17">Barros Arana</option>
+                <option value="19">Curicó</option>
+                <option value="20">Alto Las Condes</option>
+                <option value="21">Plaza La Serena</option>
+                <option value="22">Marina Arauco</option>
+                <option value="23">Tobalaba</option>
+                <option value="25">Puerto Montt</option>
+                <option value="30">Antofagasta</option>
+                <option value="37">Plaza Norte</option>
+                <option value="38">Talca</option>
+                <option value="39">Calama</option>
+                <option value="40">Portal Rancagua</option>
+                <option value="407">Puente Alto</option>
+                <option value="41">Portal Temuco</option>
+                <option value="410">Quillota</option>
+                <option value="419">Valdivia</option>
+                <option value="424">El Llano</option>
+                <option value="427">Melipilla</option>
+                <option value="433">San Felipe</option>
+                <option value="44">Los Ángeles</option>
+                <option value="464">Talcahuano</option>
+                <option value="479">Coronel</option>
+                <option value="60">El Roble</option>
+                <option value="64">Florida Center</option>
+                <option value="701">Umbrale Home ALC</option>
+                <option value="735">Pulcro ALC</option>
+                <option value="87">Temuco Centro</option>
+                <option value="88">Parque Arauco</option>
+                <option value="89">Plaza Vespucio</option>
+            </datalist>
+        </form>
 
         <div class="resultado" id="resultado">
         </div>

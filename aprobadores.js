@@ -27,8 +27,8 @@ function procesarLista() {
             return caracterPrevio + minuscula.toLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
 
-        resultadoElement.innerHTML += `<pre>    <b>m${i}</b>: associateUserToClient(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile"),</pre>`;
-        resultadoElement.innerHTML += `<pre>    <b>p${i}</b>: associatePermission(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile", scope: "approver",  metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</pre><br>`;
+        //resultadoElement.innerHTML += `<pre>    <b>m${i}</b>: associateUserToClient(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile"),</pre>`;
+        resultadoElement.innerHTML += `<pre>    <b>p${i}</b>: associateUserWithPermissions(user: "<b>${usuariosLower}</b>", clientId: "app_tienda_mobile", scope: "approver",  metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;app::posmovil"),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
 }

@@ -11,7 +11,7 @@ function procesarLista() {
 
     const resultadoElement = document.getElementById('resultado');
 
-    resultadoElement.innerHTML = `mutation securePickerPacker {`;
+    resultadoElement.innerHTML = `mutation swissSecurePackers {`;
     for (let i=0; i < listaCadenasNombre.length; i++) {
         const cadenaUsuarios = listaCadenasNombre[i].trim();
         //const cadenaTiendaUsuarios = listaCadenasTienda[i].trim();
@@ -24,10 +24,8 @@ function procesarLista() {
             return caracterPrevio + minuscula.toLocaleLowerCase(['es', 'gl', 'ca', 'pt', 'en']);
         });
 
-        //resultadoElement.innerHTML += `<pre>  <b>m${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile"),</pre>`;
-        resultadoElement.innerHTML += `<pre>  <b>m${i}</b>: associateUserWithPermissions(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile", scope: "odeon-<b>picker</b>", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre>`;
-        //resultadoElement.innerHTML += `<pre>  x${i}: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "odeon-front"),</pre>`;
-        resultadoElement.innerHTML += `<pre>  x${i}: associateUserWithPermissions(user: <b>"${usuarios}"</b>, clientId: "odeon-front", scope: "<b>packer</b>", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre><br>`;
+//        resultadoElement.innerHTML += `<pre>  <b>m${i}</b>: associateUserToClient(user: <b>"${usuarios}"</b>, clientId: "app_tienda_mobile"),</pre>`;
+        resultadoElement.innerHTML += `<pre>  <b>p${i}</b>: associateUserWithPermissions(user: <b>"${usuarios}"</b>, clientId: "odeon-front", scope: "packer", metadata: "stores::<b>${cadenaTiendaUsuarios}"</b>),</pre>`;
     }
     resultadoElement.innerHTML += `}`;
 }

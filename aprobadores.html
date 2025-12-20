@@ -26,26 +26,87 @@
     </section>
     <main class="main">
         <input type="text" id="inputText" class="content_input" placeholder="Los usuarios van aquí" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+        <!--<input type="text" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">-->
 
-        <input type="text" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
+<!-- Datalist de tiendas -->
+        <form action="/send/" method="post">
+            <input type="text" list="tiendas" id="inputTienda" class="content_input" placeholder="Número de tienda" onkeyup="procesarLista();" ondblclick="selec">
+            <datalist id="tiendas">
+                <option value="9">Lyon</option>
+                <option value="10">Plaza Oeste</option>
+                <option value="101">San Bernardo</option>
+                <option value="102">Arauco Maipú</option>
+                <option value="103">Iquique</option>
+                <option value="104">Bandera</option>
+                <option value="105">Copiapó</option>
+                <option value="106">Estación Central</option>
+                <option value="107">El Belloto</option>
+                <option value="108">Ñuñoa</option>
+                <option value="109">Osorno</option>
+                <option value="110">Arica</option>
+                <option value="111">San Antonio</option>
+                <option value="115">Costanera Center</option>
+                <option value="116">Rancagua Rex</option>
+                <option value="118">Quilín</option>
+                <option value="119">Quilicura</option>
+                <option value="121">Ovalle</option>
+                <option value="123">La Dehesa</option>
+                <option value="124">Coquimbo</option>
+                <option value="125">Independencia</option>
+                <option value="13">Valparaíso</option>
+                <option value="131">Maule</option>
+                <option value="16">Trébol</option>
+                <option value="17">Barros Arana</option>
+                <option value="19">Curicó</option>
+                <option value="20">Alto Las Condes</option>
+                <option value="21">Plaza La Serena</option>
+                <option value="22">Marina Arauco</option>
+                <option value="23">Tobalaba</option>
+                <option value="25">Puerto Montt</option>
+                <option value="30">Antofagasta</option>
+                <option value="37">Plaza Norte</option>
+                <option value="38">Talca</option>
+                <option value="39">Calama</option>
+                <option value="40">Portal Rancagua</option>
+                <option value="407">Puente Alto</option>
+                <option value="41">Portal Temuco</option>
+                <option value="410">Quillota</option>
+                <option value="419">Valdivia</option>
+                <option value="424">El Llano</option>
+                <option value="427">Melipilla</option>
+                <option value="433">San Felipe</option>
+                <option value="44">Los Ángeles</option>
+                <option value="464">Talcahuano</option>
+                <option value="479">Coronel</option>
+                <option value="60">El Roble</option>
+                <option value="64">Florida Center</option>
+                <option value="701">Umbrale Home ALC</option>
+                <option value="735">Pulcro ALC</option>
+                <option value="87">Temuco Centro</option>
+                <option value="88">Parque Arauco</option>
+                <option value="89">Plaza Vespucio</option>
+            </datalist>
+        </form>
+
+<!-- Salida de la query -->
         <div class="resultado" id="resultado">
         </div>
     </main>
-    <footer>
-        <a id="oauth__button___home" href="./index.html">
-            <span class="icon___home">
-                <svg class="icons___svg" id="icon__home" height="40px" width="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#417ff2ff2929" stroke-width="0.192"></g>
-                    <g id="SVGRepo_iconCarrier"> 
-                        <path d="M8 3V3.41667M3.41667 8H3M4.66667 4.66667L4.25 4.25M11.3333 4.66667L11.75 4.25M4.66667 11.3333L4.25 11.75M9.73244 7C9.38663 6.4022 8.74028 6 8 6C6.89543 6 6 6.89543 6 8C6 8.74028 6.4022 9.38663 7 9.73244M6 15L12.4083 9.01893C12.7929 8.65995 12.9852 8.48046 13.2041 8.41266C13.3969 8.35296 13.6031 8.35296 13.7959 8.41266C14.0148 8.48046 14.2071 8.65995 14.5917 9.01893L21 15M8 13.1333V19.4C8 19.9601 8 20.2401 8.10899 20.454C8.20487 20.6422 8.35785 20.7951 8.54601 20.891C8.75992 21 9.03995 21 9.6 21H17.4C17.9601 21 18.2401 21 18.454 20.891C18.6422 20.7951 18.7951 20.6422 18.891 20.454C19 20.2401 19 19.9601 19 19.4V13.1333" stroke="#417ff2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        </path> 
-                    </g>
-                </svg>
-            </span>
-        </a>
-    </footer>
-    <script src="./aprobadores.js">
-    </script>
-</body>
+<footer>
+<a id="oauth__button___home" href="./index.html">
+<span class="icon___home">
+    <svg class="icons___svg" id="icon__home" height="40px" width="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#417ff2ff2929" stroke-width="0.192"></g>
+        <g id="SVGRepo_iconCarrier"> 
+            <path d="M8 3V3.41667M3.41667 8H3M4.66667 4.66667L4.25 4.25M11.3333 4.66667L11.75 4.25M4.66667 11.3333L4.25 11.75M9.73244 7C9.38663 6.4022 8.74028 6 8 6C6.89543 6 6 6.89543 6 8C6 8.74028 6.4022 9.38663 7 9.73244M6 15L12.4083 9.01893C12.7929 8.65995 12.9852 8.48046 13.2041 8.41266C13.3969 8.35296 13.6031 8.35296 13.7959 8.41266C14.0148 8.48046 14.2071 8.65995 14.5917 9.01893L21 15M8 13.1333V19.4C8 19.9601 8 20.2401 8.10899 20.454C8.20487 20.6422 8.35785 20.7951 8.54601 20.891C8.75992 21 9.03995 21 9.6 21H17.4C17.9601 21 18.2401 21 18.454 20.891C18.6422 20.7951 18.7951 20.6422 18.891 20.454C19 20.2401 19 19.9601 19 19.4V13.1333" stroke="#417ff2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </path> 
+        </g>
+    </svg>
+</span>
+</a>
+</footer>
+<script src="./aprobadores.js">
+</script>
+</body></div>
 </html>

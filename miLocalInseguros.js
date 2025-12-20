@@ -50,7 +50,7 @@ function procesarLista() {
 
         resultadoElement.innerHTML += `<pre>    <b>pma${i}</b>: associateByRut(<b>user: "${usuariosRut}</b>", firstName: "<b>${usuarios}</b>", lastName: "<b>${usuariosApellidos}</b>", clientId: "app_tienda_mobile"),</pre>`;
         //resultadoElement.innerHTML += `<pre>    pmp1${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "pos_movil_app", scope: "cashier", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>;brands::<b>${usuariosMarca}</b>"),</pre>`;
-        resultadoElement.innerHTML += `<pre>    pmp${i}: associatePermission(<b>user: "${usuariosRut}</b>", clientId: "app_tienda_mobile", scope: "basico", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</pre><br>`;
+        resultadoElement.innerHTML += `<pre>    <b>pmp${i}</b>: associatePermissions(<b>user: "${usuariosRut}</b>", clientId: "app_tienda_mobile", scope: "basico", metadata: "stores::<b>${cadenaTiendaUsuarios}</b>"),</pre><br>`;
     }
     resultadoElement.innerHTML += `}`;
 }
