@@ -29,9 +29,12 @@
         <input type="text" id="inputDcs" class="content_input" placeholder="¿Dcs?" onkeyup="procesarLista();" ondblclick="selec">
         <div class="resultado" id="resultado">
         </div>
-        <div class="enlaces">
-            <a href="" class="enlace" id="enlaces__copiar">Copiar</a>
-        </div>
+<!--        <a href="" class="enlace" id="enlaces__copiar">Copiar</a> -->
+        <button class="boton" id="btn__copiar" onclick="
+            navigator.clipboard.writeText(document.getElementById('resultado').innerText);
+            this.innerText = '¡Copiado!';
+            setTimeout(() => { this.innerText = 'Copiar'; }, 2500);
+        ">Copiar</button>
     </main>
     <footer>
         <a id="oauth__button___home" href="./index.html">
