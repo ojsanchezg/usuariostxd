@@ -35,3 +35,13 @@ function procesarLista() {
     }
 resultadoElement.innerHTML += `}<br>`;
     }
+
+async function copyText() {
+    const resultadoElement = document.getElementById('resultado').value;
+    try {
+        await navigator.clipboard.writeText(resultadoElement);
+        alert('Texto copiado al portapapeles');
+    } catch (err) {
+        console.error('Error al copiar el texto: ', err);
+    }
+}

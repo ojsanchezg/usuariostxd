@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <a id="oauth__button___back" href="./consultas.html">
+        <a id="oauth__button___back" href="./dispatcher.html">
             <span class="icon___back">
                 <svg class="icons__svg" id="icon__svg__back" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -22,27 +22,34 @@
         </a>
     </header>
     <section class="subtitle">
-        <h3>Multiconsulta</h3>
+        <h3>Borrar Dispatcher</h3>
     </section>
     <main class="main">
+<!--Input donde van los usuarios-->
         <input type="text" id="inputText" class="content_input" placeholder="Los usuarios van aquí" onkeyup="procesarLista();" ondblclick="selec" autofocus>
+
+        <label for="scopes"></label>
+        <select name="" id="selectScope" onchange="procesarLista()">
+                <option value="" disabled selected="">Selecciona un scope</option>
+                <option value="administrator">Administrator</option>
+                <option value="superuser">Superuser</option>
+                <option value="dc_user">Dc_user</option>
+                <option value="visualicer">Visualicer</option>
+                <option value="store_user">Store_user</option>
+        </select>
+
+<!--Espacio donde aparecen las mutations-->
         <div class="resultado" id="resultado">
         </div>
-        <section>
-            <h6>Permite consultar varios usuarios a la vez</h6>
-            <br>
-        </section>
 
-<!--        <a href="" class="enlace" id="enlaces__copiar">Copiar</a> -->
-        <button class="boton" id="btn__copiar" onclick="
-            navigator.clipboard.writeText(document.getElementById('resultado').innerText);
-            this.innerText = '¡Copiado!';
-            setTimeout(() => { this.innerText = 'Copiar'; }, 2500);
-        ">Copiar</button>
-
+<!--Botón para copiar-->
+        <div class="enlaces">
+            <a href="" class="enlace" id="enlaces__copiar">Copiar</a>
+        </div>
     </main>
+
     <footer>
-        <a id="oauth__button___home" href="./index.html">
+        <a id="oauth__button___home" href="./posmovil.html">
             <span class="icon___home">
                 <svg class="icons___svg" id="icon__home" height="40px" width="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" transform="matrix(-1, 0, 0, 1, 0, 0)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -55,7 +62,7 @@
             </span>
         </a>
     </footer>
-    <script src="./multiConsulta.js">
+    <script src="./deleteDispatcher.js">
     </script>
 </body>
 </html>

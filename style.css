@@ -92,11 +92,14 @@ a {
 .boton {
     text-decoration: none;
     cursor: pointer;
-    width: 50px;
-    height: 20px;
+    margin: 1px;
+    padding: 2px;
     border-radius: 0.25rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vh;
     border: none;
-    background-color: bisque;
+    color: white;
+    background-color: rgb(65, 127, 242);
 }
 
 .content_input {
